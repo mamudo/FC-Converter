@@ -4,14 +4,15 @@ const inputTo = document.getElementById("inputTo");
 const btnConvert = document.querySelector(".convert");
 const btnSwap = document.querySelector(".swap");
 const convertType = document.querySelector(".convertType");
-const f = "Fahrenheit (°F)";
-const c = "Celcius (°C)";
+const btnReset = document.querySelector(".resetbtn");
 
-// btnConvert.addEventListener("click",swapTo);
-// btnConvert.addEventListener("click",swapTo);
+btnConvert.addEventListener("click",convertTo);
+btnSwap.addEventListener("click",swapTo);
+btnReset.addEventListener("click",reset);
+
 function swapTo(){
-    const data1 = document.querySelector(".convertType").firstElementChild;
-    const data2 = document.querySelector(".convertType").lastElementChild;
+    const data1 = convertType.firstElementChild;
+    const data2 = convertType.lastElementChild;
     const toText = document.querySelector(".toText");
     convertType.insertBefore(data2,toText);
     convertType.insertBefore(data1,toText.nextSibling);
@@ -20,7 +21,6 @@ function swapTo(){
     inputFrom.id = data2.id+"From";
     inputFrom.placeholder = data2.id;
     inputFrom.nextElementSibling.innerHTML = data2.innerHTML.split(" ")[1];
-
     inputTo.id = data1.id+"To";
     inputTo.nextElementSibling.innerHTML = data1.innerHTML.split(" ")[1];
 

@@ -1,4 +1,3 @@
-const convertInputs = document.getElementById("convertInputs");
 const inputFrom = document.getElementById("inputFrom");
 const inputTo = document.getElementById("inputTo");
 const btnConvert = document.querySelector(".convert");
